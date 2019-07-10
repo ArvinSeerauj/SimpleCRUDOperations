@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[tbCustomer](
     [FirstName] VARCHAR(20) NOT NULL,    
     [LastName] VARCHAR(20) NOT NULL,   
     [Address] VARCHAR(50) NULL,    
-    [Email] VARCHAR(20) NULL,
+    [Email] VARCHAR(50) NULL,
     [ContactNo] INT NULL,
     [IsActive] BIT NOT NULL DEFAULT 1
 )
