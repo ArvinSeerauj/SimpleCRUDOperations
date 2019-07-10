@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<WebCRUD.Models.Customer>
+
+<div class="jumbotron">
+    <h2>CRUD Operation</h2>
+    <p class="lead">This is an MVC web application performing CRUD (Create, Read, Update and Delete) operation with a sample Customer Record Managment System.</p>
+</div>
+
+<p>
+    @Html.ActionLink("Create", "CreateUpdate", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <b>@Html.DisplayNameFor(model => model.FullName)</b>
+            </th>
+            <th>
+                <b>@Html.DisplayNameFor(model => model.Address)</b>
+            </th>
+            <th>
+                <b>@Html.DisplayNameFor(model => model.Email)</b>
+            </th>
+            <th>
+                <b>@Html.DisplayNameFor(model => model.ContactNo)</b>
+            </th>
+            <th>
+                <b>@Html.DisplayNameFor(model => model.IsActive)</b>
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactNo)
+                </td>
+                <th>
+                    @Html.CheckBoxFor(modelItem => item.IsActive, new { @disabled = "disabled" })
+                </th>
+                <td>
+                    @Html.ActionLink(" ", "CreateUpdate", new { CustomerId = item.CustomerId }, new { @class = "fa fa-edit", title = "Edit" })
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Delete", new { CustomerId = item.CustomerId }, new { @class = "fa fa-trash", title = "Delete" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
