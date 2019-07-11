@@ -14,19 +14,19 @@ This example allows us to create an ASP.NET MVC by performing CRUD (Create, Read
 10. Open SQL Server 2016
 11. Copy and paste the script below:
 ########################################################
-CREATE DATABASE DbCompanyLtd
-GO
-USE [DbCompanyLtd]
-GO
+CREATE DATABASE DbCompanyLtd   
+GO   
+USE [DbCompanyLtd]   
+GO   
 CREATE TABLE [dbo].[tbCustomer](    
     [CustomerId] INT IDENTITY(1,1) NOT NULL,    
     [FirstName] VARCHAR(20) NOT NULL,    
     [LastName] VARCHAR(20) NOT NULL,   
     [Address] VARCHAR(50) NULL,    
-    [Email] VARCHAR(50) NULL,
-    [ContactNo] INT NULL,
-    [IsActive] BIT NOT NULL DEFAULT 1
-)
+    [Email] VARCHAR(50) NULL,   
+    [ContactNo] INT NULL,   
+    [IsActive] BIT NOT NULL DEFAULT 1   
+)   
 #########################################################
 12. Execute the script
 13. Back to Visual Studio, set the Connection String accordingly
