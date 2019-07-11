@@ -12,8 +12,8 @@ This example allows us to create an ASP.NET MVC by performing CRUD (Create, Read
 8. Open the slnCRUD from Team Explorer
 9. Before Debugging, create the database
 10. Open SQL Server 2016
-11. Copy and paste the script below:
-########################################################
+11. Copy and paste the script below:   
+########################################################   
 CREATE DATABASE DbCompanyLtd   
 GO   
 USE [DbCompanyLtd]   
